@@ -13,4 +13,6 @@ Tasks in English;
 
 3 in branch TaskInternationalTalks;
 
+PS: Sorry for the Scanner next time there will be a BufferedReader
+
 gl!
