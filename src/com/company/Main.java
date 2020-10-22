@@ -16,7 +16,7 @@ public class Main {
         char[] ArrayTemp = temp1.toCharArray();
         String Messege = null;
 
-        for (var i=0; i< ArrayTemp.length; i++)
+        for (var i=0; i< ArrayTemp.length; i++)         // Перевірка чи квадрат n містисть цифру 3
         {
             if(ArrayTemp[i]=='3')
             {
@@ -28,13 +28,13 @@ public class Main {
                 Messege = "Квадрат числа n не містить цифру  3!";
             }
         }
-        
+
         System.out.println(Messege);
 
-        String N = Integer.toString(n);
+        String N = Integer.toString(n); // Первід n в String
 
 
-        char[] ArrayN = N.toCharArray();
+        char[] ArrayN = N.toCharArray(); // Запис кожної цифри запису числа n в масив сисмолів Array5
 
         System.out.println("Число n");
 
@@ -46,7 +46,7 @@ public class Main {
         System.out.println();
 
 
-        for (int i = 0; i < ArrayN.length / 2; i++) {
+        for (int i = 0; i < ArrayN.length / 2; i++) { // Розворот числа n
             char tmp = ArrayN[i];
             ArrayN[i] = ArrayN[ArrayN.length - i - 1];
             ArrayN[ArrayN.length - i - 1] = tmp;
@@ -59,7 +59,7 @@ public class Main {
             System.out.print(ArrayN[i]);
         }
 
-        for (int i = 0; i < ArrayN.length / 2; i++) {
+        for (int i = 0; i < ArrayN.length / 2; i++) { // Розворот щоб повенути n до початкового вигляду
             char tmp = ArrayN[i];
             ArrayN[i] = ArrayN[ArrayN.length - i - 1];
             ArrayN[ArrayN.length - i - 1] = tmp;
@@ -68,7 +68,7 @@ public class Main {
         System.out.println();
 
         char Temp = ArrayN[0];
-        ArrayN[0]=ArrayN[ArrayN.length-1];
+        ArrayN[0]=ArrayN[ArrayN.length-1];   // Заміна місцями крайніх чисел числа n
         ArrayN[ArrayN.length-1]= Temp;
 
         System.out.println("Число n з зміненими місцями крайніми числами");
@@ -80,9 +80,9 @@ public class Main {
 
         System.out.println();
 
-        char[] Array5 = N.toCharArray();
+        char[] ArrayNDefolt = N.toCharArray(); // Створення масиву де кожен елемент дорівнює відповідній цифрі запису числа n
 
-        String strN = Arrays.toString(Array5);
+        String strN = Arrays.toString(ArrayNDefolt);
 
 
         StringBuilder strBilder = new StringBuilder(strN);
@@ -91,7 +91,7 @@ public class Main {
 
         String NewStringN = strBilder.toString();
 
-        char[] LastArray = NewStringN.toCharArray();
+        char[] LastArray = NewStringN.toCharArray(); // Створення масиву де кожен елемент дорівнює відповідній цифрі запису чиса n до якого по краях добавили 1
 
         System.out.println("Чилсло n до якого по краях запису добавили 1");
 
